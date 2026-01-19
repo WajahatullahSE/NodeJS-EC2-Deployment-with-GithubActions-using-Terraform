@@ -6,7 +6,7 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   response.send(`
-    <h1>Node.js Sample Application, Version #01</h1>
+    <h1>Node.js Sample Application, Version #002</h1>
     <p>Deployed on EC2 with Github Actions</p>
     <p>Welcome to Application!</p>
   `);
