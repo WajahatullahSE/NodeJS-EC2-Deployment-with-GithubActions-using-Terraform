@@ -10,19 +10,19 @@ hooks:
   BeforeInstall:
     - location: codedeploy/scripts/before_install.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   AfterInstall:
     - location: codedeploy/scripts/install_deps.sh
       timeout: 600
-      runas: ec2-user
+      runas: root
 
   ApplicationStart:
     - location: codedeploy/scripts/start_server.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   ValidateService:
     - location: codedeploy/scripts/validate_service.sh
       timeout: 300
-      runas: ec2-user
+      runas: root
