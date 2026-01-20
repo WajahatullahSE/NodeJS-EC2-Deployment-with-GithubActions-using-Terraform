@@ -15,12 +15,12 @@ Deploy a Node.js application on AWS EC2 instances with automated scaling and con
 
 ## Prerequisites
 
-- AWS account with administrative access
+- AWS account with relevant access
 - Terraform >= 1.0
 - AWS CLI configured
 - GitHub repository with Actions enabled
 - Node.js application listening on port 8080
-- S3 bucket + DynamoDB table for Terraform backend
+- S3 bucket for Terraform backend (state files)
 
 ## Important Files
 
