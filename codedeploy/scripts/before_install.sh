@@ -1,16 +1,10 @@
 #!/bin/bash
-# Clean up before installation
-
 set -e
 
-echo "Cleaning up old application files..."
-
-# Stop PM2 if running
-pm2 stop all || true
+echo "Stopping old app (if exists)"
 pm2 delete all || true
 
-# Clean up old files (but keep directory)
-cd /opt/nodeapp
-rm -rf * .[^.]*
-
-echo "Cleanup complete"
+echo "Cleaning app directory"
+rm -rf /opt/nodeapp/*
+mkdir -p /opt/nodeapp
+chown -R ec2-user:ec2-user /opt/nodeapp
