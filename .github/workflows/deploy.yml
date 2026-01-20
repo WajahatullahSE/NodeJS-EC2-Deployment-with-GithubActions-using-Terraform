@@ -41,8 +41,7 @@ jobs:
           zip -r deployment.zip . \
             -x "*.git*" \
             -x "node_modules/*" \
-            -x "terraform/*" \
-            -x "scripts/setup.sh"
+            -x "terraform/*" 
           
           echo "Deployment package created: deployment.zip"
 
