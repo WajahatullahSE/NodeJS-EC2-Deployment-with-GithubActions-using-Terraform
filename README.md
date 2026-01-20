@@ -1,6 +1,6 @@
-# AWS EC2 Auto Scaling with CodeDeploy
+# NodeJS Application Deployment on AWS EC2 (Auto Scaled) with GitHub Actions & CodeDeploy
 
-Production-ready infrastructure for deploying Node.js applications on AWS EC2 with automated scaling and continuous deployment.
+Deploy a Node.js application on AWS EC2 instances with automated scaling and continuous deployment. The infrastructure uses Terraform for provisioning, AWS CodeDeploy for application deployment, and GitHub Actions for CI/CD automation with OIDC authentication.
 
 ## Architecture
 
@@ -95,9 +95,6 @@ http://<alb-dns-name>
 - **Target Health**: EC2 Console → Target Groups → wu-node-app-tg
 - **Deployments**: CodeDeploy Console → Deployments
 
-## Cost Estimate
-
-~$50-70/month (2x t3.micro, NAT Gateway, ALB, data transfer)
 
 ## Cleanup
 
@@ -107,4 +104,4 @@ terraform destroy
 
 ---
 
-**Tech Stack**: Terraform | AWS (EC2, ALB, ASG, CodeDeploy, S3) | GitHub Actions | Node.js | PM2
+**Tech Stack**: Terraform | AWS (EC2, ALB, ASG, CodeDeploy, Cloudwatch, IAM, S3) | GitHub Actions | Node.js | PM2
